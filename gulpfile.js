@@ -1,4 +1,4 @@
-var gulp = require ('gulp');
+ qvar gulp = require ('gulp');
 var sass = require('gulp-sass');
 var browserSync= require('browser-sync');
 var reload=browserSync.reload;
