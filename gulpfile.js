@@ -1,9 +1,10 @@
- qvar gulp = require ('gulp');
+var gulp = require ('gulp');
 var sass = require('gulp-sass');
 var browserSync= require('browser-sync');
 var reload=browserSync.reload;
 var autoprefixer=require('gulp-autoprefixer');
 var clean= require('gulp-clean');
+var concat =require('gulp-concat');
 
 var SOURCEPATHS = {
   sassSource: 'src/scss/*.scss',
@@ -34,6 +35,7 @@ gulp.task('sass', function(){
 
 gulp.task('scripts',['clean-scripts'],function(){
   gulp.src(SOURCEPATHS.jsSource)
+  .pipe(concat('main.js'))
   .pipe(gulp.dest(APPPATH.js))
 });
 
