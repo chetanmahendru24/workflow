@@ -28,7 +28,7 @@ gulp.task('clean-html',function(){
 gulp.task('moveFonts', function(){
   gulp.src('./node_modules/bootstrap/dist/fonts/*.{eot,svg,ttf,woff,woff2}')
   .pipe(gulp.dest(APPPATH.fonts));
-})
+});
 gulp.task('clean-scripts',function(){
   return gulp.src(APPPATH.js + '/*.js', {read:false, force:true})
   .pipe(clean());
